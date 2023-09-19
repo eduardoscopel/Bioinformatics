@@ -1,0 +1,30 @@
+for file in k500_s1_621*.gz;
+do
+gunzip -c $file | sed "s/1.Wine\/European/European_wine/g;
+s/2.Alpechin/Alpechin/g;
+s/3.Brazilian/Brazilian_bioethanol/g;
+s/7.Mosaic/Mosaic_beer/g;
+s/5.French/French_dairy/g;
+s/6.African/African_beer/g;
+s/4.Mediterranean/Mediterranean_oak/g;
+s/8.Mixed/Mixed_origin/g;
+s/11.Ale/Ale_beer/g;
+s/10.French/French_Guiana/g;
+s/9.Mexican/Mexican_agave/g;
+s/12.West/West_African_cocoa/g;
+s/25.Sake/Sake/g;
+s/24.Asian/Asian_islands/g;
+s/26.Asian/Asian_fermentation/g;
+s/23.North/North_American_oak/g;
+s/18.Far/Far_East_Asia/g;
+s/13.African/African_palm_wine/g;
+s/21.Ecuadorean/Ecuadorean/g;
+s/19.Malaysian/Malaysian/g;
+s/14.CHNIII/CHN_III/g;
+s/22.Far/Far_East_Russian/g;
+s/16.CHNI/CHN_I/g;
+s/15.CHNII/CHN_II/g;
+s/17.Taiwanese/Taiwanese/g;
+s/20.CHN/CHN_V/g;
+" > new_${file};
+done

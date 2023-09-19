@@ -1,0 +1,9 @@
+## Identifying deleterious mutations in SSD1 sequence
+The next step of this analysis is run PROVEAN to detect possible deleterious mutations in the ssd1 gene sequence of each strain. To do that, I need to identify all missense mutations in the amino acid sequence of SSD1.
+
+### Step 1. Convert aligned DNA sequence to amino acid using EMBOSS
+```
+transeq  -sequence SSD1.alg.rc.fa - outseq SSD1.prot
+```
+
+### Step 2. Detect point mutations in the amino acid sequence using a modified version of unique.pl
